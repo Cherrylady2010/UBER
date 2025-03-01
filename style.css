@@ -432,7 +432,7 @@ li {
     height: 14px;
 }
 
-#posb__paragraph {
+#possibilities__paragraph {
     color: var(--black-background);
     background-color: var(--text-color-white);
 }
@@ -446,4 +446,85 @@ li {
         height: 32px;
     }
     
+}
+.conditions__title {
+    display: flex;
+    justify-content: space-between;
+}
+.condition__titles{
+    display: flex;
+    justify-content: space-around;
+}
+.conditions__block {
+    display: flex;
+    margin-top: 61px;
+}
+#ul__container {
+    width: 450px;
+}
+.ul {
+    li {
+        position: relative;
+        margin-top: 10px;
+        &::before {
+            content: "";
+            background: url(./assets/images/check_blue.png);
+            display: block;
+            position: absolute;
+            height: 21px;
+            width: 21px;
+            left: -26px;
+        }
+    }
+}
+.ul__before {
+    li {
+        position: relative;
+        margin-top: 10px;
+        &::before {
+            content: "";
+            background: url(./assets/images/check_red.png);
+            display: block;
+            position: absolute;
+            height: 21px;
+            width: 21px;
+            left: -26px;
+        }
+    }
+}
+.blue__title {
+    color: #1CA8C3;
+}
+.red__title {
+    color: #FF5656;
+    text-transform: uppercase;
+}
+span {
+    text-transform: uppercase;
+}
+.condition__main-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 27px;
+}
+.conditions__blue-block {
+    display: flex;
+    margin-top: 30px;
+}
+.around-the-world-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 38px;
+    color: var(--text-color-white);
+}
+.around-the-world {
+    text-align: center;
+    color: var(--text-color-white);
+}
+#world {
+    height: 720px;
+    background: url(./assets/images/world_bg.png) center center / cover no-repeat;
+}
+.world__section {
+    background-color: #080816;
 }
