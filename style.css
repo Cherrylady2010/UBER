@@ -354,6 +354,11 @@ li {
     justify-content: center;
     align-items: center;
 }
+.plus__block:hover {
+    background-color: #1e2a36;
+    box-shadow: 0 1px 6px 0 #8ac1ff;
+    cursor: pointer;
+}
 .grid-block__text {
     margin-top: 20px;
     color: var(--text-color-white);
@@ -527,4 +532,75 @@ span {
 }
 .world__section {
     background-color: #080816;
+}
+.footer {
+    height: 155px;
+   
+}
+.footer__images {
+    padding-left: 26px;
+}
+.text__countries {
+    display: flex;
+    gap: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1550px;
+    a{
+        color: var(--black-background);
+    }
+}
+.footer__links {
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+    justify-content: center;
+    a{
+        color: #999999;
+    }
+}
+.language {
+    text-align: center;
+    color: #1FBAD6;
+    text-transform: uppercase;
+}
+.line {
+    width: 359px;
+    background-color: #1FBAD6;
+    height: 4px;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+.footer__container {
+    display: flex;
+    margin-top: 48px;
+}
+.footer__block {
+    background-color: var(--black-background);
+    width:200px;
+    border-radius: 10px;
+}
+.footer__img {
+    width: 200px;
+    height: 60px;
+}
+.footer__container-block {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}
+.vertical__line {
+    height: 14px;
+    width: 2px;
+    background-color: #1EACC7;
+    position: absolute;
+}
+.horizontal__line {
+    height: 2px;
+    width: 14px;
+    background-color: #1EACC7;
 }
