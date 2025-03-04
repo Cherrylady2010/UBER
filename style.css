@@ -12,6 +12,7 @@
     --container-padding: 32px;
     --container-width: 1100px;
     --button-hover-bg-color: rgb(0, 132, 255);
+    --max-width:1440px;
 }
 a {
     text-decoration: none;
@@ -463,9 +464,17 @@ li {
 .conditions__block {
     display: flex;
     margin-top: 61px;
+    @media (max-width:966px) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
-#ul__container {
-    width: 450px;
+.documents__container {
+    position: relative;
+    left: 30px;
+    @media (max-width:967px) {
+        left: 0;
+    }
 }
 .ul {
     li {
@@ -497,6 +506,20 @@ li {
         }
     }
 }
+.conditions__container {
+    @media (max-width:966px) {
+       margin-top: 30px;
+    }
+}
+.conditions__red-container {
+    @media (max-width:966px) {
+        margin-top: 30px;
+     }
+}
+#bottom__blue-title {
+    color: #1CA8C3;
+    margin-top: 26px;
+}
 .blue__title {
     color: #1CA8C3;
 }
@@ -515,6 +538,10 @@ span {
 .conditions__blue-block {
     display: flex;
     margin-top: 30px;
+    @media (max-width:966px) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 .around-the-world-title {
     text-align: center;
@@ -530,6 +557,10 @@ span {
     height: 720px;
     background: url(./assets/images/world_bg.png) center center / cover no-repeat;
 }
+.world {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
 .world__section {
     background-color: #080816;
 }
@@ -539,12 +570,13 @@ span {
 }
 .footer__images {
     padding-left: 26px;
-    @media (max-width:789px) {
+    @media (max-width:1234px) {
         display: flex;
         align-self: end;
         justify-self: center;
-        width: 500px;
         gap: 6px;
+        padding: 0;
+        margin-top: 10px;
     }
     img{
         height: 33px;
@@ -557,9 +589,14 @@ span {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 20px;
-    margin: 0 auto;
+    justify-content: center;
     a{
         color: var(--black-background);
+    }
+    @media (max-width:726px) {
+        gap: 13px;
+        font-size: 14px;
+        margin: 0;
     }
 }
 .footer__links {
@@ -570,11 +607,21 @@ span {
     a{
         color: #999999;
     }
+    @media (max-width:726px) {
+        display: block;
+        width: 317px;
+        text-align: center;
+        font-size: 14px;
+        margin: 0;
+    }
 }
 .language {
     text-align: center;
     color: #1FBAD6;
     text-transform: uppercase;
+    @media (max-width:726px) {
+        font-size: 14px;
+    }
 }
 .line {
     width: 359px;
@@ -582,13 +629,19 @@ span {
     height: 4px;
     margin: 0 auto;
     margin-top: 13px;
+    @media (max-width:726px) {
+        width: 260px;
+    }
 }
 .footer__container {
     display: flex;
     margin-top: 48px;
     justify-content: space-between;
-    @media (max-width:726px) {
+    @media (max-width:1234px) {
         height: 160px;
+        margin-top: 21px;
+        display: block;
+        margin: 0 auto;
     }
 }
 .footer__block {
@@ -596,17 +649,28 @@ span {
     width:200px;
     border-radius: 10px;
     height: 60px;
+    @media (max-width:726px) {
+        width: 82px;
+        height: 24px;
+        border-radius: 5px;
+    }
 }
 .footer__img {
     width: 200px;
     height: 60px;
+    @media (max-width:726px) {
+        width: 82px;
+        height: 24px;
+    }
+   
 }
 .footer__container-block {
     display: flex;
     gap: 20px;
     justify-self: end;
-    @media (max-width:789px) {
-        align-content: end;
+    @media (max-width:1234px) {
+        justify-self: center;
+        margin-top: 15px;
     }
 }
 .vertical__line {
@@ -622,20 +686,26 @@ span {
 }
 .common__container{
     display: flex;
-    @media (max-width:789px) {
+    @media (max-width:1234px) {
        height: 60px;
        display: block;
     }
 }
 .text__container {
-    width: 560px;
-    display: flex;
-    flex-wrap: wrap;
-    @media (max-width:726px) {
+    @media (max-width:1234px) {
         height: 64px;
         padding: 0;
+        justify-self: center;
+        display: block;
     }
 }
 .language__container {
     margin: 0 auto;
+}
+.bottom__text {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 46px 0;
+    color: var(--text-color);
+    text-transform: uppercase;
 }
