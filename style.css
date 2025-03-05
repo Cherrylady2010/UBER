@@ -5,14 +5,19 @@
     font-family: Roboto;
 }
 :root {
+    /*Паддинг доя контейнера*/
+    --container-padding: 32px;
+    --container-padding-tablet:16px;
+    /*Ширина для контейнера*/
+    --container-width: 1100px;
+    --max-width:1440px;
+
+     /*Цвета*/
     --dark-gray: #212121;
     --text-color-white: white;
     --black-background: black;
     --text-color: #1eacc7;
-    --container-padding: 32px;
-    --container-width: 1100px;
     --button-hover-bg-color: rgb(0, 132, 255);
-    --max-width:1440px;
 }
 a {
     text-decoration: none;
@@ -24,6 +29,10 @@ a {
     margin: 0 auto;
     max-width: var(--container-width);
     padding: 0 var(--container-padding);
+
+    @media (max-width:600px) {
+        padding: 0 var(--container-padding-tablet);
+    }
 }
 .header__words {
     display: flex;
@@ -54,7 +63,10 @@ li {
     color: var(--text-color-white);
     border-right: 1px dashed #000000;
     padding-right: 30px;
-
+    
+    @media (max-width:955px) {
+        border-right: 0;
+    }
     &:last-child {
         border: none;
     }
@@ -242,21 +254,24 @@ li {
     width: 90%;
 }
 
-.adventages__block {
+.badge__block {
     background-color: var(--black-background);
     width: 112px;
     height: 24px;
     margin: 0 auto;
     margin-top: 20px;
 }
-.adventages__text {
+.badge__text {
     font-size: 11px;
     color: var(--text-color-white);
     text-align: center;
     text-transform: uppercase;
     padding: 5px;
 }
-
+#badge__white {
+    color: var(--black-background);
+    background-color: var(--text-color-white);
+}
 .grid__titles {
     color: var(--text-color);
 }
@@ -268,9 +283,12 @@ li {
     }
 }
 
-.mobile__app-container {
+.mobile__app {
     background-image: url(./assets/images/mobile_bg.jpg);
     min-height: 800px;
+    padding-top: 46px;
+    margin-top: 64px;
+
     @media (max-width:1034px) {
       padding: 18px;
       
@@ -302,7 +320,7 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
-    margin: 0 auto;
+    column-gap: 20px;
     max-width: var(--container-width);
     margin-top: 20px;
 
@@ -368,7 +386,7 @@ li {
     text-transform: uppercase;
     text-align: center;
 }
-.car__block {
+.choice__block {
     background-color: var(--black-background);
     height:499px;
     @media (max-width:394px) {
@@ -382,7 +400,6 @@ li {
 }
 .light__block {
     background-image: url(./assets/images/mobile_bg.jpg);
-    height: 397px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -438,10 +455,6 @@ li {
     height: 14px;
 }
 
-#possibilities__paragraph {
-    color: var(--black-background);
-    background-color: var(--text-color-white);
-}
 .text_gr {
     display: flex;
     align-items: end;
