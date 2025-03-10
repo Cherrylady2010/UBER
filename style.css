@@ -444,6 +444,7 @@ li {
     color: var(--text-color-white);
     font-size: 38px;
     padding-top: 26px;
+    text-transform: uppercase;
     @media (max-width:443px) {
         display: none;
     }
@@ -594,7 +595,7 @@ span {
     margin: 0 auto;
 }
 .world__section {
-    background-color: var(--black-background);
+    background-color: black;
 }
 .footer {
     height: 155px;
